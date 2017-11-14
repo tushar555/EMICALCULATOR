@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="navbar">
+      <ion-title>
+        <ion-label item-left>Details</ion-label>
+      </ion-title>
+      <ion-buttons end >
+        <button ion-button icon-only>
+            <ion-icon ios="ios-albums" md="md-albums"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row class="head">
+          <ion-col col-3>Month</ion-col>
+          <ion-col col-3>Principle</ion-col>
+          <ion-col col-3>Intrest</ion-col>
+          <ion-col col-3>Balance</ion-col>
+        </ion-row><br>
+        <ion-row class="head1" *ngFor="let detail of detailsArray">
+          <ion-col>{{detail.month}}</ion-col>
+          <ion-col>{{detail.principle}}</ion-col>
+          <ion-col>{{detail.intrest_amount}}</ion-col>
+          <ion-col>{{detail.balance}}</ion-col>
+        </ion-row>  
+      
+      </ion-grid>
+</ion-content>
